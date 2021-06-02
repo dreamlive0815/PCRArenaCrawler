@@ -20,7 +20,7 @@ namespace PCRArenaCrawler
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseUrls("http://0.0.0.0:7777");
+                    webBuilder.UseUrls("http://0.0.0.0:8848");
                     webBuilder.UseStartup<Startup>();
                 });
     }
