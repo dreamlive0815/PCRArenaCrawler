@@ -124,4 +124,24 @@ namespace SimpleHTTPClient
         public static string PlainText { get { return "text/plain"; } }
     }
 
+
+    public class APIResult<T>
+    {
+
+        public static readonly int SUCCESS_CODE = 0;
+
+        public int Code { get; set; } = SUCCESS_CODE;
+
+        public string Message { get; set; }
+
+        public T Data { get; set; }
+
+        public void AssertSuccessCode()
+        {
+            if (Code != SUCCESS_CODE)
+            {
+                throw new Exception(Message);
+            }
+        }
+    }
 }

@@ -36,6 +36,8 @@ namespace PCRArenaCrawler
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseMiddleware<ExceptionHandlerMiddleware>();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
